@@ -24,3 +24,92 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Flower Animation */
+.flower-container {
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+}
+
+.flower-message {
+  position: absolute;
+  top: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out 3s forwards;
+}
+
+#stem, #leaf-left, #leaf-right {
+  opacity: 0;
+  animation: growStem 2s ease-in-out 0.5s forwards;
+}
+
+#leaf-left, #leaf-right {
+  animation-delay: 1.5s;
+}
+
+#center {
+  transform-origin: center;
+  transform: scale(0);
+  animation: showCenter 1s ease-in-out 2s forwards;
+}
+
+#petal1, #petal2, #petal3, #petal4, #petal5, #petal6, #petal7 {
+  opacity: 0;
+  transform-origin: 100px 100px;
+  animation: unfoldPetal 1.5s ease-in-out forwards;
+}
+
+#petal1 { animation-delay: 2.1s; }
+#petal2 { animation-delay: 2.3s; }
+#petal3 { animation-delay: 2.5s; }
+#petal4 { animation-delay: 2.7s; }
+#petal5 { animation-delay: 2.9s; }
+#petal6 { animation-delay: 3.1s; }
+#petal7 { animation-delay: 3.3s; }
+
+@keyframes growStem {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes showCenter {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes unfoldPetal {
+  from {
+    opacity: 0;
+    transform: scale(0) rotate(-20deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

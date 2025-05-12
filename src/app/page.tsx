@@ -1,103 +1,31 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col items-center justify-center min-h-screen p-8 gap-8">
+      <div className="flower-container">
+        <svg width="200" height="200" viewBox="0 0 200 200" className="mx-auto">
+          {/* Stem */}
+          <path id="stem" d="M100,185 L100,140" stroke="#3A8E3D" strokeWidth="4" fill="none" />
+          
+          {/* Leaves */}
+          <path id="leaf-left" d="M100,160 C85,150 75,165 85,175" stroke="#3A8E3D" strokeWidth="3" fill="#4CAF50" />
+          <path id="leaf-right" d="M100,170 C115,160 125,175 115,185" stroke="#3A8E3D" strokeWidth="3" fill="#4CAF50" />
+          
+          {/* Petals */}
+          <path id="petal1" d="M100,100 C85,85 85,65 100,55 C115,65 115,85 100,100" stroke="#FF69B4" strokeWidth="2" fill="#FF85C2" />
+          <path id="petal2" d="M100,100 C85,115 65,115 55,100 C65,85 85,85 100,100" stroke="#FF69B4" strokeWidth="2" fill="#FF85C2" />
+          <path id="petal3" d="M100,100 C115,115 135,115 145,100 C135,85 115,85 100,100" stroke="#FF69B4" strokeWidth="2" fill="#FF85C2" />
+          <path id="petal4" d="M100,100 C85,115 65,135 55,145 C65,155 85,135 100,120" stroke="#FF69B4" strokeWidth="2" fill="#FF85C2" />
+          <path id="petal5" d="M100,100 C115,115 135,135 145,145 C135,155 115,135 100,120" stroke="#FF69B4" strokeWidth="2" fill="#FF85C2" />
+          <path id="petal6" d="M100,100 C115,85 135,65 145,55 C135,45 115,65 100,80" stroke="#FF69B4" strokeWidth="2" fill="#FF85C2" />
+          <path id="petal7" d="M100,100 C85,85 65,65 55,55 C65,45 85,65 100,80" stroke="#FF69B4" strokeWidth="2" fill="#FF85C2" />
+          
+          {/* Center */}
+          <circle id="center" cx="100" cy="100" r="15" fill="#FFEB3B" stroke="#FFC107" strokeWidth="2" />
+        </svg>
+        <div className="flower-message">
+          Håber du får det godt igen Mulle
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
